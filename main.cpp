@@ -1,6 +1,10 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+#include "Greedy/kruskal.cpp"
+#include "DS/disjointSet.cpp"
+using namespace std;
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+//    kruskalMain();
+    mainDisjointSet();
     return 0;
+
 }
