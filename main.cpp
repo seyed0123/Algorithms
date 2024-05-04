@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 #include "Greedy/kruskal.cpp"
+#include "Greedy/prime.cpp"
 //#include "DS/disjointSet.cpp"
 using namespace std;
 int main() {
-    mainKruskal();
+    mainPrime();
     return 0;
 }
