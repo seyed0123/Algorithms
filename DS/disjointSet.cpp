@@ -1,6 +1,7 @@
 //
 // Created by seyed on 5/4/2024.
 //
+using namespace std;
 class DisjointSet{
     int*rank,*parent,n;
 public:
