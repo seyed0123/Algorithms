@@ -3,9 +3,10 @@
 #include "Greedy/prime.cpp"
 #include "Greedy/digkstra.cpp"
 #include "Greedy/partialKnapsack.cpp"
+#include "Greedy/deadline.cpp"
 //#include "DS/disjointSet.cpp"
 using namespace std;
 int main() {
-    mainPartialKnapsack();
+    mainDeadline();
     return 0;
 }
