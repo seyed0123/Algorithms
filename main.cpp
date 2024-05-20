@@ -9,6 +9,6 @@
 #include "DP/lis.cpp"
 using namespace std;
 int main() {
-    mainLIS();
+    mainKruskal();
     return 0;
 }
