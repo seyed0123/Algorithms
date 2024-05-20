@@ -7,8 +7,9 @@
 //#include "DS/disjointSet.cpp"
 #include "DP/minCoin.cpp"
 #include "DP/lis.cpp"
+#include "DP/lcs.cpp"
 using namespace std;
 int main() {
-    mainKruskal();
+    mainLCS();
     return 0;
 }
