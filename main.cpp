@@ -8,8 +8,9 @@
 #include "DP/minCoin.cpp"
 #include "DP/lis.cpp"
 #include "DP/lcs.cpp"
+#include "DP/floyd.cpp"
 using namespace std;
 int main() {
-    mainLCS();
+    mainFloyd();
     return 0;
 }
