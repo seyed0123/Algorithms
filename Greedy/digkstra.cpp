@@ -2,18 +2,20 @@
 // Created by seyed on 5/4/2024.
 //
 using namespace std;
-vector<pair<int,pair<int,int>>> digkstra(int** l,int n,int max){
+vector<pair<int,pair<int,int>>> digkstra(int** l,int n,int max,int source){
     vector<pair<int,pair<int,int>>> ans;
     int mindist[n],nearest[n];
     bool check[n];
-    for (int i = 1; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         nearest[i]=0;
-        mindist[i]=l[0][i];
+        mindist[i]=l[source][i];
         check[i]=false;
     }
+    mindist[source] = 0;
+    check[source] =true;
     for (int i = 0; i < n-1; ++i) {
         int min=max,c=0;
-        for (int j = 1; j < n; ++j) {
+        for (int j = 0; j < n; ++j) {
             if(!check[j] && mindist[j]<min){
                 min = mindist[j];
                 c = j;
@@ -21,7 +23,7 @@ vector<pair<int,pair<int,int>>> digkstra(int** l,int n,int max){
         }
         ans.emplace_back(mindist[c], make_pair(nearest[c],c));
         check[c]=true;
-        for (int j = 1; j < n; ++j) {
+        for (int j = 0; j < n; ++j) {
             if(!check[j] && mindist[j] > l[c][j]+mindist[c]){
                 mindist[j] = l[c][j]+mindist[c];
                 nearest[j]=c;
@@ -50,7 +52,7 @@ void mainDigstra(){
     l[2][4] = 7;
     l[3][4] = 5;
 
-    vector<pair<int,pair<int,int>>> result = digkstra(l, n, max);
+    vector<pair<int,pair<int,int>>> result = digkstra(l, n, max,2);
 
     for (const auto& edge : result) {
         std::cout << "Distance: " << edge.first << ", Nearest: " << edge.second.first << ", Current: " << edge.second.second << std::endl;

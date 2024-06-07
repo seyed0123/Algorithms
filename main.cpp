@@ -12,6 +12,6 @@
 #include "DP/bellman-ford.cpp"
 using namespace std;
 int main() {
-    mainBellman_ford();
+    mainDigstra();
     return 0;
 }
