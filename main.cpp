@@ -9,8 +9,9 @@
 #include "DP/lis.cpp"
 #include "DP/lcs.cpp"
 #include "DP/floyd.cpp"
+#include "DP/bellman-ford.cpp"
 using namespace std;
 int main() {
-    mainFloyd();
+    mainBellman_ford();
     return 0;
 }
