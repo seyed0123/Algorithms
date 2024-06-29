@@ -12,6 +12,8 @@ vector<pair<int,pair<int,int>>> kruskal(vector<int>v,vector<pair<int,pair<int,in
     DisjointSet set(v.size());
     vector<pair<int,pair<int,int>>> res;
     while (res.size()<v.size()-1){
+        if(heap.empty())
+            break;
         auto x=heap.top();
         heap.pop();
         if(set.find(x.second.first) !=set.find(x.second.second)){
